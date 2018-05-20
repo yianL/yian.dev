@@ -35,5 +35,11 @@
 
 .neon-text {
   font-family: 'neontubes';
+}
+
+.blink {
   animation: blink 4s infinite alternate;
+}
+.buzz {
+  animation: buzz 0.01s infinite alternate;
 }

@@ -3,7 +3,14 @@ import rgb2hsl from 'rgb-to-hsl';
 import cn from 'classnames';
 import './NeonText.css';
 
-export default class NeonText extends Component {
+class NeonText extends Component {
+  static defaultProps = {
+    r: 255,
+    g: 0,
+    b: 60,
+    animation: 'blink'
+  };
+
   getStyles(r, g, b) {
     const rgb = `${r},${g},${b}`;
     const color = rgb2hsl(r, g, b);
@@ -23,11 +30,11 @@ export default class NeonText extends Component {
   }
 
   render() {
-    const { className, children, r, g, b } = this.props;
+    const { className, children, r, g, b, animation } = this.props;
 
     return (
       <span
-        className={cn('neon-text', className)}
+        className={cn('neon-text', className, animation)}
         style={this.getStyles(r, g, b)}
       >
         {children}
@@ -35,3 +42,5 @@ export default class NeonText extends Component {
     );
   }
 }
+
+export default NeonText;

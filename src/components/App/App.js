@@ -2,18 +2,18 @@ import React, { Component } from 'react';
 import cn from 'classnames';
 import Parallax from 'parallax-js';
 import NeonText from '../NeonText';
+import TypeWriter from '../TypeWriter';
 import './App.css';
 
 export default class App extends Component {
   componentDidMount() {
     const scene = document.getElementById('scene');
-    const parallaxInstance = new Parallax(scene, {
+    new Parallax(scene, {
       invertX: true,
       invertY: true,
       scalarX: 10,
       frictionY: 0.1
     });
-    console.log('Parallax', scene);
   }
 
   render() {
@@ -29,9 +29,12 @@ export default class App extends Component {
         </div>
         <div className="layer" data-depth="0.2">
           <div className={cn('name', 'last')}>
-            <NeonText r={38} g={149} b={255}>
+            <NeonText r={38} g={149} b={255} animation="buzz">
               Lai
             </NeonText>
+          </div>
+          <div className="cmd">
+            <TypeWriter phrases={['hello', 'world', 'I am groot']} />
           </div>
         </div>
       </div>
