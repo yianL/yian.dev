@@ -6,4 +6,26 @@
   background-color: #030c1c;
   height: 100vh;
   width: 100vw;
+  position: relative;
+}
+
+.layer {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+}
+
+.name {
+  font-size: 8vw;
+  position: absolute;
+}
+
+.first {
+  top: 50px;
+  left: 40vw;
+}
+
+.last {
+  top: 150px;
+  left: 50vw;
 }
