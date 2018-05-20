@@ -4,12 +4,14 @@
   "private": true,
   "homepage": "https://yianl.github.io",
   "dependencies": {
+    "classnames": "^2.2.5",
     "husky": "^0.14.3",
     "lint-staged": "^7.1.1",
     "prettier": "^1.12.1",
     "react": "^16.3.2",
     "react-dom": "^16.3.2",
-    "react-scripts": "1.1.4"
+    "react-scripts": "1.1.4",
+    "rgb-to-hsl": "^0.0.3"
   },
   "scripts": {
     "precommit": "lint-staged",
