@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import cn from 'classnames';
 import Parallax from 'parallax-js';
 import NeonText from '../NeonText';
 import TypeWriter from '../TypeWriter';
@@ -19,37 +18,49 @@ export default class App extends Component {
 
   render() {
     return (
-      <div className="App" id="scene">
-        <div className="layer" data-depth="0.2">
-          <HashtagBackground
-            hashtags={['reactjs', 'angularjs', 'java', 'webapp']}
-          />
-        </div>
-        <div className="layer" data-depth="0.4">
-          <HashtagBackground
-            hashtags={[
-              'kubernetes',
-              'containers',
-              'fullstack',
-              'fixedgear',
-              'yolo'
-            ]}
-          />
-        </div>
-        <div className="layer" data-depth="0.8">
-          <div className={cn('name', 'first')}>
-            <NeonText r={255} g={0} b={60}>
-              Yi-An
-            </NeonText>
+      <div className="App">
+        <div id="scene" className="background">
+          <div className="layer" data-depth="0.2">
+            <HashtagBackground
+              hashtags={['reactjs', 'angularjs', 'java', 'webapp']}
+            />
           </div>
+          <div className="layer" data-depth="0.4">
+            <HashtagBackground
+              hashtags={[
+                'kubernetes',
+                'containers',
+                'fullstack',
+                'fixedgear',
+                'yolo'
+              ]}
+            />
+          </div>
+        </div>
+        <div className="container">
+          <div className="name">
+            <div className="first">
+              <NeonText r={255} g={0} b={60}>
+                Yi-An
+              </NeonText>
+            </div>
 
-          <div className={cn('name', 'last')}>
-            <NeonText r={38} g={149} b={255} animation="buzz">
-              Lai
-            </NeonText>
+            <div className="last">
+              <NeonText r={38} g={149} b={255} animation="buzz">
+                Lai
+              </NeonText>
+            </div>
+          </div>
+          <div className="menu">
+            <ul>
+              <li>Github</li>
+              <li>LinkedIn</li>
+            </ul>
           </div>
           <div className="cmd">
-            <TypeWriter phrases={['hello', 'world', 'I am groot']} />
+            <TypeWriter
+              phrases={['likes to ride a fixed gear', 'world', 'I am groot']}
+            />
           </div>
         </div>
       </div>

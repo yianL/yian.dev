@@ -1,7 +1,12 @@
 .App {
+  position: relative;
   height: 100vh;
   width: 100vw;
-  position: relative;
+}
+
+.background {
+  position: absolute;
+  z-index: -1;
 }
 
 .layer {
@@ -18,26 +23,57 @@
   filter: blur(1px);
 }
 
+.container {
+  display: flex;
+  flex-flow: row wrap;
+  padding: 18vh 25px 0;
+}
+
+.name,
+.menu,
+.cmd {
+  width: 100%;
+}
+
 .name {
-  font-size: 8vw;
-  position: absolute;
+  font-size: 100px;
+  line-height: 100px;
+  text-align: right;
+  padding-right: 25px;
 }
 
-.first {
-  top: 150px;
-  left: 40vw;
-}
-
-.last {
-  top: 250px;
-  left: 50vw;
+.menu {
+  background-color: blue;
 }
 
 .cmd {
-  position: absolute;
-  top: 420px;
-  left: 40vw;
-  width: 20vw;
-  min-width: 400px;
   text-align: initial;
+  position: relative;
+  margin: 20px 0;
+}
+
+@media (min-width: 600px) {
+  .name {
+    width: 60%;
+  }
+  .menu {
+    width: 40%;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: 768px;
+    margin: 0 auto;
+  }
+  .cmd {
+    padding-left: 60px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .name {
+    font-size: 120px;
+    line-height: 120px;
+  }
 }
