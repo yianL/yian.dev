@@ -3,6 +3,7 @@ import cn from 'classnames';
 import Parallax from 'parallax-js';
 import NeonText from '../NeonText';
 import TypeWriter from '../TypeWriter';
+import HashtagBackground from '../HashtagBackground';
 import './App.css';
 
 export default class App extends Component {
@@ -11,7 +12,7 @@ export default class App extends Component {
     new Parallax(scene, {
       invertX: true,
       invertY: true,
-      scalarX: 10,
+      // scalarX: 10,
       frictionY: 0.1
     });
   }
@@ -19,15 +20,29 @@ export default class App extends Component {
   render() {
     return (
       <div className="App" id="scene">
-        <div data-depth="0.8" />
+        <div className="layer" data-depth="0.2">
+          <HashtagBackground
+            hashtags={['reactjs', 'angularjs', 'java', 'webapp']}
+          />
+        </div>
         <div className="layer" data-depth="0.4">
+          <HashtagBackground
+            hashtags={[
+              'kubernetes',
+              'containers',
+              'fullstack',
+              'fixedgear',
+              'yolo'
+            ]}
+          />
+        </div>
+        <div className="layer" data-depth="0.8">
           <div className={cn('name', 'first')}>
             <NeonText r={255} g={0} b={60}>
               Yi-An
             </NeonText>
           </div>
-        </div>
-        <div className="layer" data-depth="0.2">
+
           <div className={cn('name', 'last')}>
             <NeonText r={38} g={149} b={255} animation="buzz">
               Lai

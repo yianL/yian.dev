@@ -1,0 +1,97 @@
+{
+  "basics": {
+    "name": "Yi-An Lai",
+    "firstName": "Yi-An",
+    "lastName": "Lai",
+    "otherNames": [
+      "Andrew"
+    ],
+    "label": "Full-stack Developer",
+    "labels": [
+      "Full-stack Developer",
+      "Brews his own coffee",
+      "Rides a fixie",
+      "Listens to EDM & Debussy",
+      "Loves the sound of rain",
+      "Codes for fun"
+    ],
+    "picture": "assets/profile.jpg",
+    "qrcode": "assets/qrcode.svg",
+    "email": "me@yianlai.me",
+    "website": "http://yianlai.me",
+    "summary": "",
+    "keywords": [
+      "Javascript",
+      "HTML",
+      "CSS",
+      "React.js",
+      "Redux",
+      "Angular.js",
+      "Node.js",
+      "React Native"
+    ],
+    "location": [{
+      "city": "South San Francisco",
+      "countryCode": "US",
+      "region": "California"
+    }],
+    "profiles": [{
+      "network": "twitter",
+      "username": "yian_lai"
+    }, {
+      "network": "github",
+      "username": "yianL"
+    }, {
+      "network": "linkedin",
+      "username": "yi-an-andrew-lai-81856354"
+    }]
+  },
+  "work": [{
+    "company": "MuleSoft",
+    "position": "Software Engineer",
+    "website": "http://mulesoft.com",
+    "startDate": "2015-04-20",
+    "endDate": "present",
+    "summary": "Description...",
+    "highlights": [
+      "Started the company"
+    ]
+  }],
+  "education": [{
+    "institution": "University of California, Los Angeles",
+    "area": "Computer Science",
+    "studyType": "Masters",
+    "startDate": "2013-09-20",
+    "endDate": "2015-03-20",
+    "courses": [
+      "DB1101 - Basic SQL"
+    ]
+  }, {
+    "institution": "National Taiwan University",
+    "area": "Electrical Engineering",
+    "studyType": "Bachelors",
+    "startDate": "2007-09-20",
+    "endDate": "2011-06-20",
+    "courses": []
+  }],
+  "awards": [],
+  "skills": [{
+    "name": "Web Development",
+    "level": "Expert",
+    "keywords": [
+      "HTML",
+      "CSS",
+      "Javascript",
+      "React",
+      "Angular.js"
+    ]
+  }],
+  "languages": [{
+    "language": "Mandarin",
+    "fluency": "Native speaker"
+  }, {
+    "language": "English",
+    "fluency": "Fluent"
+  }],
+  "interests": []
+}
