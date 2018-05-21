@@ -43,7 +43,21 @@
 }
 
 .menu {
-  background-color: blue;
+  display: flex;
+  align-items: center;
+  transition: transform 0.3s ease-in;
+  transform-origin: left;
+}
+
+.menu ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 10px 0;
+  font-family: 'lcddot', Courier, monospace;
+  font-size: 40px;
+}
+.menu ul li {
+  cursor: pointer;
 }
 
 .cmd {
@@ -59,6 +73,12 @@
   .menu {
     width: 40%;
   }
+  .menu:hover {
+    transform: rotate3d(-0.2, -1, 0, 40deg);
+  }
+  .menu ul {
+    font-size: 60px;
+  }
 }
 
 @media (min-width: 768px) {
@@ -69,6 +89,12 @@
   .cmd {
     padding-left: 60px;
   }
+  .menu {
+    width: 40%;
+  }
+  /* .menu:hover {
+    transform: rotate3d(-0.4, -1, 0, 45deg);
+  } */
 }
 
 @media (min-width: 1440px) {
