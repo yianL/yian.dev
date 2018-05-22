@@ -2,7 +2,12 @@ import React, { Component } from 'react';
 import './Menu.css';
 
 class Menu extends Component {
+  static defaultProps = {
+    onShuffle: () => {}
+  };
+
   render() {
+    const { onShuffle } = this.props;
     return (
       <ul className="menu">
         <li>
@@ -32,7 +37,7 @@ class Menu extends Component {
             src/
           </a>
         </li>
-        <li>shuffle.sh</li>
+        <li onClick={onShuffle}>shuffle.sh</li>
       </ul>
     );
   }

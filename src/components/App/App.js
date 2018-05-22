@@ -22,11 +22,15 @@ class App extends Component {
     }
   }
 
+  onShuffle = () => {
+    this.setState({});
+  };
+
   render() {
     const { firstName, lastName, labels } = this.props.data;
 
     return (
-      <div className="App">
+      <div className="app">
         <div id="scene" className="background">
           <div className="layer" data-depth="0.2">
             <HashtagBackground
@@ -60,7 +64,7 @@ class App extends Component {
             </div>
           </div>
           <div className="side">
-            <Menu />
+            <Menu onShuffle={this.onShuffle} />
           </div>
           <div className="footer">
             <TypeWriter phrases={labels} />

@@ -18,9 +18,8 @@ class HashtagBackground extends Component {
             key={hashtag}
             className="hashtag"
             style={{
-              top: `${randomInt(100)}%`,
-              left: `${randomInt(100)}%`,
-              transform: `rotate(${randomInt(8) - 4}deg)`
+              transform: `rotate(${randomInt(8) - 4}deg)
+              translate(${randomInt(100)}vw, ${randomInt(100)}vh)`
             }}
           >
             {`#${hashtag}`}

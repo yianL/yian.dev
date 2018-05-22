@@ -7,6 +7,6 @@
 }
 
 .hashtag {
-  position: absolute;
   opacity: 0.3;
+  transition: transform 0.3s ease-out;
 }
