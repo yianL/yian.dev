@@ -4,5 +4,15 @@ import './index.css';
 import App from './components/App';
 import registerServiceWorker from './registerServiceWorker';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+fetch(`${process.env.PUBLIC_URL}/data.json`)
+  .then(response => {
+    if (response.status >= 400) {
+      throw new Error('Bad response from server');
+    }
+    return response.json();
+  })
+  .then(data =>
+    ReactDOM.render(<App data={data} />, document.getElementById('root'))
+  );
+
 registerServiceWorker();

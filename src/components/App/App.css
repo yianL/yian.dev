@@ -29,54 +29,43 @@
   padding: 18vh 25px 0;
 }
 
-.name,
-.menu,
-.cmd {
+.title,
+.side,
+.footer {
   width: 100%;
 }
 
-.name {
+.title {
   font-size: 100px;
   line-height: 100px;
   text-align: right;
   padding-right: 25px;
 }
 
-.menu {
+.side {
   display: flex;
   align-items: center;
-  transition: transform 0.3s ease-in;
+  transition: transform 0.25s ease-in;
   transform-origin: left;
 }
 
-.menu ul {
-  list-style: none;
-  padding-left: 0;
-  margin: 10px 0;
-  font-family: 'lcddot', Courier, monospace;
-  font-size: 40px;
-}
-.menu ul li {
-  cursor: pointer;
-}
-
-.cmd {
+.footer {
   text-align: initial;
   position: relative;
   margin: 20px 0;
 }
 
 @media (min-width: 600px) {
-  .name {
+  .title {
     width: 60%;
   }
-  .menu {
+  .side {
     width: 40%;
   }
-  .menu:hover {
+  .side:hover {
     transform: rotate3d(-0.2, -1, 0, 40deg);
   }
-  .menu ul {
+  .side .menu {
     font-size: 60px;
   }
 }
@@ -86,19 +75,16 @@
     width: 768px;
     margin: 0 auto;
   }
-  .cmd {
+  .footer {
     padding-left: 60px;
   }
-  .menu {
+  .side {
     width: 40%;
   }
-  /* .menu:hover {
-    transform: rotate3d(-0.4, -1, 0, 45deg);
-  } */
 }
 
 @media (min-width: 1440px) {
-  .name {
+  .title {
     font-size: 120px;
     line-height: 120px;
   }

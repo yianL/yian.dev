@@ -1,22 +1,30 @@
 import React, { Component } from 'react';
-import Parallax from 'parallax-js';
+// import Parallax from 'parallax-js';
 import NeonText from '../NeonText';
 import TypeWriter from '../TypeWriter';
+import Menu from '../Menu';
 import HashtagBackground from '../HashtagBackground';
 import './App.css';
 
-export default class App extends Component {
+class App extends Component {
   componentDidMount() {
-    const scene = document.getElementById('scene');
-    new Parallax(scene, {
-      invertX: true,
-      invertY: true,
-      // scalarX: 10,
-      frictionY: 0.1
-    });
+    // performance impact :(
+    // this.parallax = new Parallax(document.getElementById('scene'), {
+    //   invertX: true,
+    //   invertY: true,
+    //   frictionY: 0.1
+    // });
+  }
+
+  componentWillUnmount() {
+    if (this.parallax) {
+      this.parallax.destroy();
+    }
   }
 
   render() {
+    const { firstName, lastName, labels } = this.props.data;
+
     return (
       <div className="App">
         <div id="scene" className="background">
@@ -38,32 +46,29 @@ export default class App extends Component {
           </div>
         </div>
         <div className="container">
-          <div className="name">
+          <div className="title">
             <div className="first">
               <NeonText r={255} g={0} b={60}>
-                Yi-An
+                {firstName}
               </NeonText>
             </div>
 
             <div className="last">
               <NeonText r={38} g={149} b={255} animation="buzz">
-                Lai
+                {lastName}
               </NeonText>
             </div>
           </div>
-          <div className="menu">
-            <ul>
-              <li>Github</li>
-              <li>LinkedIn</li>
-            </ul>
+          <div className="side">
+            <Menu />
           </div>
-          <div className="cmd">
-            <TypeWriter
-              phrases={['likes to ride a fixed gear', 'world', 'I am groot']}
-            />
+          <div className="footer">
+            <TypeWriter phrases={labels} />
           </div>
         </div>
       </div>
     );
   }
 }
+
+export default App;
