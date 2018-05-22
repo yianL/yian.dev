@@ -17,11 +17,13 @@
 }
 
 .layer[data-depth='0.2'] {
-  filter: blur(1.5px);
+  filter: blur(1.8px);
+  opacity: 0.25;
 }
 
 .layer[data-depth='0.4'] {
   filter: blur(1px);
+  opacity: 0.3;
 }
 
 .container {

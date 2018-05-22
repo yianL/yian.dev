@@ -27,26 +27,22 @@ class App extends Component {
   };
 
   render() {
-    const { firstName, lastName, labels } = this.props.data;
+    const { firstName, lastName, labels, skills } = this.props.data;
+    const expertSkills = skills
+      .filter(s => s.level === 'expert')
+      .map(s => s.name);
+    const moderateSkills = skills
+      .filter(s => s.level === 'moderate')
+      .map(s => s.name);
 
     return (
       <div className="app">
         <div id="scene" className="background">
           <div className="layer" data-depth="0.2">
-            <HashtagBackground
-              hashtags={['reactjs', 'angularjs', 'java', 'webapp']}
-            />
+            <HashtagBackground hashtags={moderateSkills} />
           </div>
           <div className="layer" data-depth="0.4">
-            <HashtagBackground
-              hashtags={[
-                'kubernetes',
-                'containers',
-                'fullstack',
-                'fixedgear',
-                'yolo'
-              ]}
-            />
+            <HashtagBackground hashtags={expertSkills} />
           </div>
         </div>
         <div className="container">

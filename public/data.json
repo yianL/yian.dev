@@ -7,28 +7,19 @@
   ],
   "label": "Full-stack Developer",
   "labels": [
-    "Full-stack Developer",
-    "Brews his own coffee",
-    "Rides a fixed gear",
-    "Listens to EDM & Debussy",
-    "Loves the sound of rain",
-    "Codes for fun"
+    "fullstack developer",
+    "loves to code and build things",
+    "brews his own coffee",
+    "rides a fixed gear bike",
+    "chills with deep house and Debussy",
+    "prefers sunshine",
+    "but loves the sound of rain"
   ],
   "picture": "assets/profile.jpg",
   "qrcode": "assets/qrcode.svg",
   "email": "lai61616@gmail.com",
   "website": "https://yianlai.me",
   "summary": "",
-  "keywords": [
-    "Javascript",
-    "HTML",
-    "CSS",
-    "React.js",
-    "Redux",
-    "Angular.js",
-    "Node.js",
-    "React Native"
-  ],
   "location": [
     {
       "city": "South San Francisco",
@@ -82,15 +73,44 @@
   "awards": [],
   "skills": [
     {
-      "name": "Web Development",
-      "level": "Expert",
-      "keywords": [
-        "HTML",
-        "CSS",
-        "Javascript",
-        "React",
-        "Angular.js"
-      ]
+      "name": "javascript",
+      "level": "expert"
+    },
+    {
+      "name": "reactjs",
+      "level": "expert"
+    },
+    {
+      "name": "angularjs",
+      "level": "expert"
+    },
+    {
+      "name": "webdev",
+      "level": "expert"
+    },
+    {
+      "name": "kubernetes",
+      "level": "expert"
+    },
+    {
+      "name": "HTML",
+      "level": "moderate"
+    },
+    {
+      "name": "css",
+      "level": "moderate"
+    },
+    {
+      "name": "java",
+      "level": "moderate"
+    },
+    {
+      "name": "fullstackdev",
+      "level": "moderate"
+    },
+    {
+      "name": "mobiledev",
+      "level": "moderate"
     }
   ],
   "languages": [
