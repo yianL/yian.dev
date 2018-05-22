@@ -26,5 +26,8 @@
       "prettier --single-quote --write",
       "git add"
     ]
+  },
+  "devDependencies": {
+    "surge": "^0.20.1"
   }
 }
