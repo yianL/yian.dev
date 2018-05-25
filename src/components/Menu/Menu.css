@@ -20,5 +20,7 @@
 
 .menu li:hover {
   transform: translate(15px, 0);
-  color: rgb(58, 245, 120);
+  color: hsl(140, 88%, 85%);
+  text-shadow: hsl(140, 88%, 55%) 0px 0px 0.1em,
+    hsl(140, 88%, 55%) 0px 0px 0.4em;
 }
