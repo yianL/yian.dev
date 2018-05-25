@@ -62,7 +62,7 @@ class TypeWriter extends Component {
   render() {
     const { allowReplay } = this.state;
     return (
-      <span className="typewriter">
+      <div className="typewriter">
         <span>{'> '}</span>
         <span ref={this.spanRef} />
         <div
@@ -72,7 +72,7 @@ class TypeWriter extends Component {
           <span>Replay</span>
           <i className="fas fa-redo-alt" />
         </div>
-      </span>
+      </div>
     );
   }
 }

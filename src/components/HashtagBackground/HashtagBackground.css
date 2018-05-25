@@ -4,6 +4,7 @@
   position: relative;
   font-size: 3.5em;
   color: #777;
+  overflow: hidden;
 }
 
 .hashtag {

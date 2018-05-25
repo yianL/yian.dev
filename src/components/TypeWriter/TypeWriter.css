@@ -4,7 +4,7 @@
 }
 
 .replay {
-  position: absolute;
+  position: fixed;
   right: 8px;
   bottom: 8px;
   cursor: pointer;
@@ -31,4 +31,10 @@
 .replay i {
   margin-left: 5px;
   font-size: 0.7em;
+}
+
+@media (min-width: 600px) {
+  .replay {
+    position: absolute;
+  }
 }
