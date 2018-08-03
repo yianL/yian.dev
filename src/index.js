@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './components/App';
 import registerServiceWorker from './registerServiceWorker';
+import { Signature } from './utils/constants';
 
 fetch(`${process.env.PUBLIC_URL}/data.json`)
   .then(response => {
@@ -12,8 +13,9 @@ fetch(`${process.env.PUBLIC_URL}/data.json`)
     return response.json();
   })
   .then(data => {
+    console.log(Signature, 'color: blue; font-weight: bold');
     console.log(
-      'Hi there! Welcome, and feel free to look around. Try this: yian.interests'
+      "Poking around? Be my guest. Try this: yian.interests.join(',')"
     );
     window.yian = { ...data };
     ReactDOM.render(<App data={data} />, document.getElementById('root'));
