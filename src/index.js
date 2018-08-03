@@ -11,8 +11,12 @@ fetch(`${process.env.PUBLIC_URL}/data.json`)
     }
     return response.json();
   })
-  .then(data =>
-    ReactDOM.render(<App data={data} />, document.getElementById('root'))
-  );
+  .then(data => {
+    console.log(
+      'Hi there! Welcome, and feel free to look around. Try this: yian.interests'
+    );
+    window.yian = { ...data };
+    ReactDOM.render(<App data={data} />, document.getElementById('root'));
+  });
 
 registerServiceWorker();

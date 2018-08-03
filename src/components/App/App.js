@@ -27,7 +27,7 @@ class App extends Component {
   };
 
   render() {
-    const { firstName, lastName, labels, skills } = this.props.data;
+    const { firstName, lastName, facts, skills } = this.props.data;
     const expertSkills = skills
       .filter(s => s.level === 'expert')
       .map(s => s.name);
@@ -63,7 +63,7 @@ class App extends Component {
             <Menu onShuffle={this.onShuffle} />
           </div>
           <div className="footer">
-            <TypeWriter phrases={labels} />
+            <TypeWriter phrases={facts} />
           </div>
         </div>
       </div>
