@@ -28,7 +28,6 @@
     ]
   },
   "devDependencies": {
-    "surge": "^0.20.1",
     "jest-cli": "^23.0.0"
   }
 }

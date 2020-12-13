@@ -65,9 +65,6 @@
   .side {
     width: 40%;
   }
-  .side:hover {
-    transform: rotate3d(-0.2, -1, 0, 40deg);
-  }
   .side .menu {
     font-size: 60px;
   }
