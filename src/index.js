@@ -15,7 +15,7 @@ fetch(`${process.env.PUBLIC_URL}/data.json`)
   .then(data => {
     console.log(Signature, 'color: blue; font-weight: bold');
     console.log(
-      "Poking around? Be my guest. Try this: yian.interests.join(',')"
+      "Poking around? Try this: yian.skills.map(s => s.name).join(', ')"
     );
     window.yian = { ...data };
     ReactDOM.render(<App data={data} />, document.getElementById('root'));

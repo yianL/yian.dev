@@ -10,7 +10,7 @@
     "fullstack developer",
     "loves coding",
     "builds cool stuff",
-    "goes on rides & logs them on Strava",
+    "logs his weekend rides on Strava",
     "listens to deep house & Debussy",
     "enjoys sunshine & the sound of rain"
   ],
@@ -101,10 +101,6 @@
     },
     {
       "name": "fullstackdev",
-      "level": "moderate"
-    },
-    {
-      "name": "mobiledev",
       "level": "moderate"
     }
   ],
