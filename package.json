@@ -6,12 +6,12 @@
   "dependencies": {
     "classnames": "^2.2.5",
     "husky": "^0.14.3",
-    "lint-staged": "^7.1.1",
+    "lint-staged": "^12.1.2",
     "parallax-js": "^3.1.0",
     "prettier": "^1.12.1",
-    "react": "^16.3.2",
-    "react-dom": "^16.3.2",
-    "react-scripts": "1.1.4",
+    "react": "^17.0.2",
+    "react-dom": "^16.14.0",
+    "react-scripts": "^4.0.3",
     "rgb-to-hsl": "^0.0.3"
   },
   "scripts": {
@@ -19,8 +19,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject",
-    "heroku-deploy": "git push heroku master"
+    "eject": "react-scripts eject"
   },
   "lint-staged": {
     "src/**/*.{js,jsx,json,css}": [
@@ -29,6 +28,18 @@
     ]
   },
   "devDependencies": {
-    "jest-cli": "^23.0.0"
+    "jest-cli": "^27.4.3"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }
