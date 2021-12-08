@@ -3,5 +3,5 @@
 cd ${HOME}/yian.dev
 git pull
 npm i
-npm build
+npm run build
 pm2 restart yian.dev
