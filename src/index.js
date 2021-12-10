@@ -1,9 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { io } from 'socket.io-client';
 import './index.css';
 import App from './components/App';
 import registerServiceWorker from './registerServiceWorker';
 import { Signature } from './utils/constants';
+
+const client = process.env.NODE_ENV === 'development' ? io(':4000') : io();
+client.on('greet', data => {
+  console.log('message: ' + data);
+});
+
+window.client = client;
 
 fetch(`${process.env.PUBLIC_URL}/data.json`)
   .then(response => {
@@ -19,6 +27,8 @@ fetch(`${process.env.PUBLIC_URL}/data.json`)
     );
     window.yian = { ...data };
     ReactDOM.render(<App data={data} />, document.getElementById('root'));
+
+    client.emit('greet', data);
   });
 
 registerServiceWorker();
