@@ -22,10 +22,7 @@ class NeonText extends Component {
       0 0 20px rgba(${rgb},.5),
       0 0 40px rgba(${rgb},1),
       0 0 100px rgba(${rgb},1),
-      0 0 200px rgba(${rgb},1),
-      0 0 300px rgba(${rgb},1),
-      0 0 500px rgba(${rgb},1),
-      0 0 1000px rgba(${rgb},1)`
+      0 0 200px rgba(${rgb},1)`
     };
   }
 
