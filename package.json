@@ -7,22 +7,27 @@
     "classnames": "^2.2.5",
     "husky": "^0.14.3",
     "lint-staged": "^12.1.2",
-    "parallax-js": "^3.1.0",
     "prettier": "^1.12.1",
     "react": "^17.0.2",
     "react-dom": "^16.14.0",
     "react-scripts": "^4.0.3",
-    "rgb-to-hsl": "^0.0.3"
+    "rgb-to-hsl": "^0.0.3",
+    "socket.io": "^4.4.0",
+    "socket.io-client": "^4.4.0"
   },
   "scripts": {
     "precommit": "lint-staged",
     "start": "react-scripts start",
+    "devserver": "PORT=4000 node app.js",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },
   "lint-staged": {
     "src/**/*.{js,jsx,json,css}": [
+      "prettier --single-quote --write"
+    ],
+    "*.js": [
       "prettier --single-quote --write"
     ]
   },
