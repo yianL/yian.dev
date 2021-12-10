@@ -27,6 +27,9 @@
     "src/**/*.{js,jsx,json,css}": [
       "prettier --single-quote --write"
     ],
+    "server/**/*.js": [
+      "prettier --single-quote --write"
+    ],
     "*.js": [
       "prettier --single-quote --write"
     ]
