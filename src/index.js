@@ -10,6 +10,9 @@ const client = process.env.NODE_ENV === 'development' ? io(':4000') : io();
 client.on('greet', data => {
   console.log('message: ' + data);
 });
+client.on('connect', () => {
+  console.log('Connected. ID: ' + client.id);
+});
 
 window.client = client;
 

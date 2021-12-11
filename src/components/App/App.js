@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-// import Parallax from 'parallax-js';
 import NeonText from '../NeonText';
 import TypeWriter from '../TypeWriter';
 import Menu from '../Menu';
@@ -8,21 +7,6 @@ import GoogleAnalytics from '../GoogleAnalytics';
 import './App.css';
 
 class App extends Component {
-  componentDidMount() {
-    // performance impact :(
-    // this.parallax = new Parallax(document.getElementById('scene'), {
-    //   invertX: true,
-    //   invertY: true,
-    //   frictionY: 0.1
-    // });
-  }
-
-  componentWillUnmount() {
-    if (this.parallax) {
-      this.parallax.destroy();
-    }
-  }
-
   onShuffle = () => {
     this.setState({});
   };
