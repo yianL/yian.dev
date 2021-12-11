@@ -10,6 +10,7 @@
     "prettier": "^1.12.1",
     "react": "^17.0.2",
     "react-dom": "^16.14.0",
+    "react-helmet": "^6.1.0",
     "react-scripts": "^4.0.3",
     "rgb-to-hsl": "^0.0.3",
     "socket.io": "^4.4.0",
