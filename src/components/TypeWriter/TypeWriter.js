@@ -1,77 +1,109 @@
 import React, { Component } from 'react';
-import cn from 'classnames';
 import Typewriter from './utils/typewriter';
 import './TypeWriter.css';
+
+const initializeTypewriterJs = (targetDom, onComplete) => {
+  const typewriter = new Typewriter(targetDom);
+  typewriter.setCaret('_');
+  typewriter.setCaretPeriod(500);
+  typewriter.setDelay(50, 20);
+  typewriter.setSeqCompletionCallback(onComplete);
+  return typewriter;
+};
 
 class TypeWriter extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      allowReplay: false
+      isTypeProgressing: false,
+      sequence: []
     };
 
     this.spanRef = this.spanRef.bind(this);
-    this.playSequence = this.playSequence.bind(this);
-    this.onTypeComplete = this.onTypeComplete.bind(this);
-
-    this.sequence = props.phrases
-      .reduce((acc, item) => {
-        acc.push({
-          text: item,
-          delayAfter: 2500
-        });
-        acc.push({
-          text: '\b'.repeat(item.length),
-          delayAfter: 1000
-        });
-        return acc;
-      }, [])
-      .concat({
-        text: props.phrases[0],
-        delayAfter: 2500
-      });
+    this.getRandomPhrase = this.getRandomPhrase.bind(this);
+    this.playRandomSequence = this.playRandomSequence.bind(this);
+    this.replayRandomSequence = this.replayRandomSequence.bind(this);
+    this.onTypeSequenceComplete = this.onTypeSequenceComplete.bind(this);
   }
 
   componentDidMount() {
-    this.playSequence();
+    setTimeout(() => {
+      this.playRandomSequence(false);
+    }, 500);
   }
 
-  onTypeComplete() {
-    this.setState({ allowReplay: true });
+  onTypeSequenceComplete() {
+    this.setState({
+      isTypeProgressing: false
+    });
   }
 
   spanRef(r) {
     this.targetSpan = r;
   }
 
-  playSequence() {
-    this.setState({ allowReplay: false }, () =>
-      setTimeout(() => {
-        this.targetSpan.innerHTML = '';
-        this.typewriter = new Typewriter(this.targetSpan);
-        this.typewriter.setCaret('_');
-        this.typewriter.setCaretPeriod(500);
-        this.typewriter.setDelay(50, 20);
-        this.typewriter.setSeqCompletionCallback(this.onTypeComplete);
-        this.typewriter.playSequence(this.sequence);
-      }, 500)
+  playRandomSequence(shouldClearPreviousContent) {
+    if (!this.typewriter) {
+      this.typewriter = initializeTypewriterJs(
+        this.targetSpan,
+        this.onTypeSequenceComplete
+      );
+    }
+
+    const newSequence = this.getRandomPhrase(shouldClearPreviousContent);
+    this.setState(
+      {
+        isTypeProgressing: true,
+        sequence: newSequence
+      },
+      () => {
+        this.typewriter.playSequence(newSequence);
+      }
     );
   }
 
+  getRandomPhrase(shouldClearPreviousContent) {
+    const { phrases } = this.props;
+    const { sequence } = this.state;
+
+    const result = [];
+    const previousPhrase =
+      sequence.length && sequence[sequence.length - 1].text;
+
+    if (shouldClearPreviousContent && previousPhrase) {
+      result.push({
+        text: '\b'.repeat(previousPhrase.length),
+        delayAfter: 300
+      });
+    }
+
+    let randomPhrase;
+
+    do {
+      randomPhrase = phrases[Math.floor(Math.random() * phrases.length)];
+    } while (randomPhrase === previousPhrase);
+
+    result.push({
+      text: randomPhrase
+    });
+
+    return result;
+  }
+
+  replayRandomSequence() {
+    this.playRandomSequence(true);
+  }
+
   render() {
-    const { allowReplay } = this.state;
+    const { isTypeProgressing } = this.state;
     return (
-      <div className="typewriter">
+      <div
+        className="typewriter"
+        onClick={isTypeProgressing ? undefined : this.replayRandomSequence}
+      >
         <span>{'> '}</span>
         <span ref={this.spanRef} />
-        <div
-          className={cn('replay', { show: allowReplay })}
-          onClick={this.playSequence}
-        >
-          <span>Replay</span>
-          <i className="fas fa-redo-alt" />
-        </div>
       </div>
     );
   }

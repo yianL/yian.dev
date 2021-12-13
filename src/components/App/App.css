@@ -54,7 +54,6 @@
 .footer {
   text-align: initial;
   position: relative;
-  margin: 20px 0;
 }
 
 @media (min-width: 600px) {
@@ -65,7 +64,7 @@
     width: 40%;
   }
   .side .menu {
-    font-size: 60px;
+    font-size: 50px;
   }
 }
 
