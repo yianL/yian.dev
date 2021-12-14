@@ -1,7 +1,7 @@
 {
-  "short_name": "YALai",
-  "name": "Yi An Lai",
-  "start_url": "./index.html",
+  "short_name": "yian.dev",
+  "name": "yian.dev",
+  "start_url": ".",
   "icons": [
     {
       "src": "/android-chrome-192x192.png",
