@@ -7,11 +7,11 @@
   ],
   "label": "Full-stack Developer",
   "facts": [
-    "claims to be a fullstack developer",
+    "is a fullstack developer",
     "believes that coding should be fun",
     "logs his weekend rides on Strava",
     "enjoys EDM, and sometimes Debussy",
-    "loves sunny days and rainy sound equally"
+    "loves sunny days and the sound of rain"
   ],
   "picture": "assets/profile.jpg",
   "qrcode": "assets/qrcode.svg",
@@ -19,7 +19,7 @@
   "summary": "",
   "location": [
     {
-      "city": "South San Francisco",
+      "city": "San Mateo",
       "countryCode": "US",
       "region": "California"
     }
@@ -42,9 +42,7 @@
       "startDate": "2015-04-20",
       "endDate": "present",
       "summary": "Description...",
-      "highlights": [
-        "Started the company"
-      ]
+      "highlights": []
     }
   ],
   "education": [
@@ -67,19 +65,7 @@
   ],
   "skills": [
     {
-      "name": "javascript",
-      "level": "expert"
-    },
-    {
-      "name": "reactjs",
-      "level": "expert"
-    },
-    {
-      "name": "angularjs",
-      "level": "expert"
-    },
-    {
-      "name": "webdev",
+      "name": "java",
       "level": "expert"
     },
     {
@@ -87,19 +73,23 @@
       "level": "expert"
     },
     {
-      "name": "HTML",
+      "name": "microservices",
+      "level": "expert"
+    },
+    {
+      "name": "javascript",
+      "level": "expert"
+    },
+    {
+      "name": "golang",
       "level": "moderate"
     },
     {
-      "name": "css",
+      "name": "helm",
       "level": "moderate"
     },
     {
-      "name": "java",
-      "level": "moderate"
-    },
-    {
-      "name": "fullstackdev",
+      "name": "fullstack",
       "level": "moderate"
     }
   ],
