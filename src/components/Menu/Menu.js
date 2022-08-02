@@ -23,7 +23,7 @@ class Menu extends Component {
           <a
             target="_blank"
             rel="noopener noreferrer"
-            href="https://www.linkedin.com/in/yi-an-andrew-lai-81856354"
+            href="https://www.linkedin.com/in/yi-an-lai-andrew"
           >
             linkedin/
           </a>
@@ -32,7 +32,7 @@ class Menu extends Component {
           <a
             target="_blank"
             rel="noopener noreferrer"
-            href="https://github.com/yianL/yianlai.me"
+            href="https://github.com/yianL/yian.dev"
           >
             src/
           </a>
