@@ -22,7 +22,7 @@ class App extends Component {
 
     return (
       <div className="app">
-        <GoogleAnalytics id="UA-53225620-3" />
+        <GoogleAnalytics id="G-932TWBGMNL" />
         <div id="scene" className="background">
           <div className="layer" data-depth="0.2">
             <HashtagBackground hashtags={moderateSkills} />
