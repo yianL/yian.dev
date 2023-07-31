@@ -1,15 +1,12 @@
 const express = require('express');
 const path = require('path');
 const { createServer } = require('http');
-const socketIO = require('./server/socketIO');
 
 const port = process.env.PORT || 3000;
 const isProduction = process.env.NODE_ENV === 'production';
 
 const app = express();
 const httpServer = createServer(app);
-
-socketIO(httpServer, getServerConfig());
 
 app.use(express.static(path.join(__dirname, 'build')));
 
