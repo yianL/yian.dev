@@ -1,0 +1,89 @@
+.app {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+}
+
+.background {
+  position: absolute;
+  z-index: -1;
+}
+
+.layer {
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+}
+
+.layer[data-depth='0.2'] {
+  filter: blur(2px);
+  opacity: 0.25;
+}
+
+.layer[data-depth='0.4'] {
+  filter: blur(1px);
+  opacity: 0.3;
+}
+
+.container {
+  display: flex;
+  flex-flow: row wrap;
+  padding: 18vh 25px 0;
+}
+
+.title,
+.side,
+.footer {
+  width: 100%;
+}
+
+.title {
+  font-size: 100px;
+  line-height: 100px;
+  text-align: right;
+  padding-right: 25px;
+}
+
+.side {
+  display: flex;
+  align-items: center;
+  transition: transform 0.25s ease-in;
+  transform-origin: left;
+}
+
+.footer {
+  text-align: initial;
+  position: relative;
+}
+
+@media (min-width: 600px) {
+  .title {
+    width: 60%;
+  }
+  .side {
+    width: 40%;
+  }
+  .side .menu {
+    font-size: 50px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: 768px;
+    margin: 0 auto;
+  }
+  .footer {
+    padding-left: 60px;
+  }
+  .side {
+    width: 40%;
+  }
+}
+
+@media (min-width: 1440px) {
+  .title {
+    font-size: 120px;
+    line-height: 120px;
+  }
+}

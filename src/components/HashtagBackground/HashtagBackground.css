@@ -1,0 +1,12 @@
+.hashtags {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  font-size: 3.5em;
+  color: #777;
+  overflow: hidden;
+}
+
+.hashtag {
+  transition: transform 0.3s ease-out;
+}

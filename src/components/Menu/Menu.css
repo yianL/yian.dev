@@ -1,0 +1,26 @@
+.menu {
+  list-style: none;
+  padding-left: 0;
+  margin: 10px 0;
+  font-size: 40px;
+  text-shadow: 0px 0px 0.1em, 0px 0px 0.4em;
+}
+
+.menu li {
+  cursor: pointer;
+  transition: transform 0.15s ease-out;
+  margin-bottom: 5px;
+}
+
+.menu li a,
+.menu li a:active {
+  color: inherit;
+  text-decoration: none;
+}
+
+.menu li:hover {
+  transform: translate(5px, 0);
+  color: hsl(140, 88%, 85%);
+  text-shadow: hsl(140, 88%, 55%) 0px 0px 0.1em,
+    hsl(140, 88%, 55%) 0px 0px 0.4em;
+}
