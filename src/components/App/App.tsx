@@ -2,7 +2,6 @@ import NeonText from "../NeonText";
 import TypeWriter from "../TypeWriter";
 import Menu from "../Menu";
 import HashtagBackground from "../HashtagBackground";
-import GoogleAnalytics from "../GoogleAnalytics";
 import "./App.css";
 
 type DataType = typeof import("../../../public/data.json");
@@ -18,7 +17,6 @@ const App = ({ data }: { data: DataType }) => {
 
   return (
     <div className="app">
-      <GoogleAnalytics id="G-932TWBGMNL" />
       <div id="scene" className="background">
         <div className="layer" data-depth="0.2">
           <HashtagBackground hashtags={moderateSkills} />
