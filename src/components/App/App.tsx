@@ -3,10 +3,11 @@ import TypeWriter from "../TypeWriter";
 import Menu from "../Menu";
 import HashtagBackground from "../HashtagBackground";
 import "./App.css";
+import ReactHelmet from "react-helmet";
 
 type DataType = typeof import("../../../public/data.json");
 
-const App = ({ data }: { data: DataType }) => {
+const App = ({ data, version }: { data: DataType; version: string }) => {
   const { firstName, lastName, facts, skills } = data;
   const expertSkills = skills
     .filter((s) => s.level === "expert")
@@ -17,6 +18,9 @@ const App = ({ data }: { data: DataType }) => {
 
   return (
     <div className="app">
+      <ReactHelmet>
+        <meta name="version" content={version} />
+      </ReactHelmet>
       <div id="scene" className="background">
         <div className="layer" data-depth="0.2">
           <HashtagBackground hashtags={moderateSkills} />
@@ -24,6 +28,7 @@ const App = ({ data }: { data: DataType }) => {
         <div className="layer" data-depth="0.4">
           <HashtagBackground hashtags={expertSkills} />
         </div>
+        R
       </div>
       <div className="container">
         <div className="title">

@@ -3,6 +3,7 @@ import "./index.css";
 import reportWebVitals from "./reportWebVitals";
 import App from "./components/App";
 import { Signature } from "./utils/constants";
+import pac from "../package.json";
 
 fetch(`${process.env.PUBLIC_URL}/data.json`)
   .then((response) => {
@@ -18,7 +19,7 @@ fetch(`${process.env.PUBLIC_URL}/data.json`)
     const root = ReactDOM.createRoot(
       document.getElementById("root") as HTMLElement
     );
-    root.render(<App data={data} />);
+    root.render(<App data={data} version={pac.version} />);
   });
 
 // If you want to start measuring performance in your app, pass a function

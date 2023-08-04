@@ -5,6 +5,6 @@ import data from "../../../public/data.json";
 
 it("renders without crashing", () => {
   const div = document.createElement("div");
-  ReactDOM.render(<App data={data} />, div);
+  ReactDOM.render(<App data={data} version="1.0" />, div);
   ReactDOM.unmountComponentAtNode(div);
 });
