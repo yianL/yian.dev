@@ -7,7 +7,13 @@ import ReactHelmet from "react-helmet";
 
 type DataType = typeof import("../../../public/data.json");
 
-const App = ({ data, version }: { data: DataType; version: string }) => {
+const App = ({
+  data,
+  version = "0.0.0",
+}: {
+  data: DataType;
+  version?: string;
+}) => {
   const { firstName, lastName, facts, skills } = data;
   const expertSkills = skills
     .filter((s) => s.level === "expert")
