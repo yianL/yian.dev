@@ -1,7 +1,7 @@
 import ReactDOM from "react-dom";
 import App from ".";
 
-import data from "../../../public/data.json";
+import data from "../../../data.json";
 
 it("renders without crashing", () => {
   const div = document.createElement("div");

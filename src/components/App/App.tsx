@@ -5,7 +5,7 @@ import HashtagBackground from "../HashtagBackground";
 import "./App.css";
 import ReactHelmet from "react-helmet";
 
-type DataType = typeof import("../../../public/data.json");
+type DataType = typeof import("../../../data.json");
 
 const App = ({
   data,
