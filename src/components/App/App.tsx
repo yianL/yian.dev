@@ -34,7 +34,6 @@ const App = ({
         <div className="layer" data-depth="0.4">
           <HashtagBackground hashtags={expertSkills} />
         </div>
-        R
       </div>
       <div className="container">
         <div className="title">

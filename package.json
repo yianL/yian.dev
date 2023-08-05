@@ -17,6 +17,7 @@
   "scripts": {
     "start": "source .env && react-scripts start",
     "firebase-start": "firebase emulators:start",
+    "firebase-deploy": "firebase deploy --except hosting",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
