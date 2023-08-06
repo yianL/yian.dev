@@ -10,6 +10,7 @@
 /build
 
 .firebase
+.firebase-emulator-data
 
 # misc
 .DS_Store
