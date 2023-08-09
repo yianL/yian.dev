@@ -22,10 +22,6 @@
 *.tsbuildinfo
 next-env.d.ts
 
-
-.firebase
-.firebase-emulator-data
-
 # misc
 .DS_Store
 .env.local
@@ -36,12 +32,6 @@ next-env.d.ts
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-firebase-debug.log*
-firestore-debug.log*
-ui-debug.log*
-firebase-config.json
-database-debug.log
-firebase-export*
 
 # temporary files
 public-old
