@@ -1,9 +1,10 @@
-import Container from "./container";
 import cn from "classnames";
 
-type Props = {
+import Container from "./container";
+
+interface Props {
   preview?: boolean;
-};
+}
 
 const Alert = ({ preview }: Props) => {
   return preview ? (

@@ -1,16 +1,17 @@
-import Avatar from './avatar'
-import DateFormatter from './date-formatter'
-import CoverImage from './cover-image'
-import Link from 'next/link'
-import type Author from '../interfaces/author'
+import Link from "next/link";
 
-type Props = {
-  title: string
-  coverImage: string
-  date: string
-  excerpt: string
-  author: Author
-  slug: string
+import Avatar from "./avatar";
+import CoverImage from "./cover-image";
+import DateFormatter from "./date-formatter";
+import type Author from "../interfaces/author";
+
+interface Props {
+  title: string;
+  coverImage: string;
+  date: string;
+  excerpt: string;
+  author: Author;
+  slug: string;
 }
 
 const HeroPost = ({
@@ -20,7 +21,7 @@ const HeroPost = ({
   excerpt,
   author,
   slug,
-}: Props) => {
+}: Props): JSX.Element => {
   return (
     <section>
       <div className="mb-8 md:mb-16">
@@ -47,7 +48,7 @@ const HeroPost = ({
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default HeroPost
+export default HeroPost;

@@ -1,5 +1,5 @@
-const SectionSeparator = () => {
-  return <hr className="border-neutral-200 mt-28 mb-24" />
-}
+const SectionSeparator = (): JSX.Element => {
+  return <hr className="border-neutral-200 mt-28 mb-24" />;
+};
 
-export default SectionSeparator
+export default SectionSeparator;

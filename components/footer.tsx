@@ -1,6 +1,6 @@
 import Container from "./container";
 
-const Footer = () => {
+const Footer = (): JSX.Element => {
   return (
     <footer className="bg-neutral-50 border-t border-neutral-200">
       <Container>
