@@ -23,7 +23,7 @@ const initializeTypewriterJs = (
   return typewriter;
 };
 
-const TypeWriter = ({ phrases }: { phrases: string[] }) => {
+const TypeWriter = ({ phrases }: { phrases: string[] }): JSX.Element => {
   const [isTypeProgressing, setIsTypeProgressing] = useState(false);
   const [sequence, setSequence] = useState<SequenceItem[]>([]);
   const targetSpan = useRef<HTMLElement>(null);
@@ -55,7 +55,7 @@ const TypeWriter = ({ phrases }: { phrases: string[] }) => {
     [phrases, sequence]
   );
 
-  const onTypeSequenceComplete = () => {
+  const onTypeSequenceComplete = (): void => {
     setIsTypeProgressing(false);
   };
 
@@ -76,7 +76,7 @@ const TypeWriter = ({ phrases }: { phrases: string[] }) => {
     [getRandomPhrase]
   );
 
-  const replayRandomSequence = () => {
+  const replayRandomSequence = (): void => {
     playRandomSequence(true);
   };
 
@@ -84,6 +84,7 @@ const TypeWriter = ({ phrases }: { phrases: string[] }) => {
     setTimeout(() => {
       playRandomSequence(false);
     }, 500);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (

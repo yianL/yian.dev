@@ -5,10 +5,13 @@ module.exports = {
     es2021: true,
     node: true,
   },
-  extends: [
-    "standard-with-typescript",
-    "plugin:@next/next/recommended",
-    "prettier",
+  extends: ["next"],
+  ignorePatterns: [
+    "node_modules/",
+    "build/",
+    ".next/",
+    ".eslintrc.js",
+    "tailwind.config.js",
   ],
   parserOptions: {
     ecmaVersion: "latest",

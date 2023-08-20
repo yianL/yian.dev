@@ -6,7 +6,7 @@ interface Props {
   preview?: boolean;
 }
 
-const Alert = ({ preview }: Props) => {
+const Alert = ({ preview }: Props): JSX.Element => {
   return preview ? (
     <div
       className={cn("border-b", {
@@ -27,7 +27,9 @@ const Alert = ({ preview }: Props) => {
         </div>
       </Container>
     </div>
-  ) : null;
+  ) : (
+    <></>
+  );
 };
 
 export default Alert;

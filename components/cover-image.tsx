@@ -8,7 +8,7 @@ interface Props {
   slug?: string;
 }
 
-const CoverImage = ({ title, src, slug }: Props) => {
+const CoverImage = ({ title, src, slug }: Props): JSX.Element => {
   const image = (
     <Image
       src={src}
