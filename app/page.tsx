@@ -4,9 +4,13 @@ import React from "react";
 import Container from "../components/container";
 import Intro from "../components/intro";
 import Layout from "../components/layout";
+import PostList from "../components/post-list";
+import { getAllPosts } from "../lib/api";
 import { CMS_NAME } from "../lib/constants";
 
 export default function Index(): JSX.Element {
+  const allPostsData = allPosts();
+
   return (
     <>
       <Layout>
@@ -15,8 +19,12 @@ export default function Index(): JSX.Element {
         </Head>
         <Container>
           <Intro />
+          <PostList posts={allPostsData} />
         </Container>
       </Layout>
     </>
   );
 }
+
+const allPosts = () =>
+  getAllPosts(["title", "date", "slug", "author", "coverImage", "excerpt"]);

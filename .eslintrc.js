@@ -22,7 +22,7 @@ module.exports = {
   rules: {
     "@typescript-eslint/prefer-nullish-coalescing": 0,
     "@typescript-eslint/strict-boolean-expressions": 0,
-    "@typescript-eslint/explicit-function-return-type": 1,
+    "@typescript-eslint/explicit-function-return-type": 0,
     "import/order": [
       "error",
       {
