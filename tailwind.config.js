@@ -4,20 +4,22 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        "accent-1": "#FAFAFA",
-        "accent-2": "#EAEAEA",
-        "accent-7": "#333",
-        success: "#0070f3",
-        cyan: "#79FFE1",
-      },
-      spacing: {
-        28: "7rem",
+        brand: {
+          50: "#f6f7f6",
+          100: "#e2e6e1",
+          200: "#c6ccc3",
+          300: "#a1aa9e",
+          400: "#7d897a",
+          500: "#616d5f",
+          600: "#4c574a",
+          700: "#40473e",
+          800: "#353b34",
+          900: "#2e332e",
+          950: "#181b18",
+        },
       },
       letterSpacing: {
         tighter: "-.04em",
-      },
-      lineHeight: {
-        tight: 1.2,
       },
       fontSize: {
         "5xl": "2.5rem",

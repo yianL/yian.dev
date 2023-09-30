@@ -3,7 +3,7 @@ interface Props {
 }
 
 const Container = ({ children }: Props): JSX.Element => {
-  return <div className="container mx-auto px-5">{children}</div>;
+  return <div className="container mx-auto">{children}</div>;
 };
 
 export default Container;

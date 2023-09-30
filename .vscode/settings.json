@@ -27,6 +27,9 @@
       "source.fixAll.eslint": true
     }
   },
+  "files.associations": {
+    "*.css": "tailwindcss",
+  },
   "cSpell.words": [
     "firestore",
     "tailwindcss"
