@@ -23,7 +23,7 @@ export default function RootLayout({
       <head>
         <Script
           src="https://kit.fontawesome.com/87445c11d6.js"
-          crossOrigin="anonymous"
+          strategy="beforeInteractive"
         />
       </head>
       <body>{children}</body>
