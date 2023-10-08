@@ -1,22 +1,28 @@
+import Logo from "./ppd-logo";
+
 const Home = (): JSX.Element => {
   return (
     <div className="flex-col md:flex-row flex items-center md:justify-between md:h-screen">
-      <div className="flex flex-col items-center basis-full md: md:w-400 gap-2">
+      <div className="flex flex-col items-center md:w-5/12 gap-2">
+        <Logo />
         <h1>Yi-An Lai</h1>
-        <h2>Pedal-Powered Development</h2>
-        <div className="flex flex-row items-center justify-center gap-2">
+        <h2>Fullstack Dev | Roadie</h2>
+        <div className="flex flex-row items-center justify-center gap-2 text-4xl">
           <a href="https://www.linkedin.com/in/yi-an-lai-andrew/">
-            <i className="fab fa-linkedin fa-2x"></i>
+            <i className="fa-brands fa-linkedin"></i>
           </a>
           <a href="https://github.com/yianL">
-            <i className="fab fa-github fa-2x"></i>
+            <i className="fa-brands fa-square-github"></i>
+          </a>
+          <a href="https://www.strava.com/athletes/32534779">
+            <i className="fa-brands fa-strava"></i>
           </a>
           <a href="https://docs.google.com/document/d/1VpCJXs3vGY7mk4KDMjQkLSZmTz399kFW-lUGZVxjZXo/edit?usp=sharing">
-            <i className="fas fa-file-lines fa-2x"></i>
+            <i className="fa-regular fa-address-card"></i>
           </a>
         </div>
       </div>
-      <div className="flex flex-col items-center basis-full">
+      <div className="flex flex-col items-center md:w-7/12 p-4">
         <h4 className="text-center md:text-left text-lg mt-5 md:pl-8">
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quas
           voluptas saepe voluptates fugit provident, ipsa repudiandae recusandae
