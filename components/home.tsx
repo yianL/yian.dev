@@ -9,11 +9,11 @@ type Props = {
 const Home = ({ posts }: Props): JSX.Element => {
   return (
     <div className="flex-col md:flex-row flex items-center md:justify-between md:h-screen">
-      <div className="flex flex-col items-center md:w-5/12 gap-2">
+      <div className="flex flex-col items-center md:w-5/12 gap-2 py-16 md:py-0">
         <Logo />
         <h1>Yi-An Lai</h1>
         <h2>Fullstack Dev | Roadie</h2>
-        <div className="flex flex-row items-center justify-center gap-2 text-4xl">
+        <div className="flex flex-row items-center justify-center gap-2 text-4xl min-h-[40px]">
           <a href="https://www.linkedin.com/in/yi-an-lai-andrew/">
             <i className="fa-brands fa-linkedin"></i>
           </a>
