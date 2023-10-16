@@ -1,6 +1,12 @@
+import PostType from "../interfaces/post";
+import PostList from "./post-list";
 import Logo from "./ppd-logo";
 
-const Home = (): JSX.Element => {
+type Props = {
+  posts: PostType[];
+};
+
+const Home = ({ posts }: Props): JSX.Element => {
   return (
     <div className="flex-col md:flex-row flex items-center md:justify-between md:h-screen">
       <div className="flex flex-col items-center md:w-5/12 gap-2">
@@ -23,12 +29,7 @@ const Home = (): JSX.Element => {
         </div>
       </div>
       <div className="flex flex-col items-center md:w-7/12 p-4">
-        <h4 className="text-center md:text-left text-lg mt-5 md:pl-8">
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quas
-          voluptas saepe voluptates fugit provident, ipsa repudiandae recusandae
-          aperiam quaerat modi dolorem esse perspiciatis ducimus placeat vel!
-          Illo nihil facere saepe.
-        </h4>
+        <PostList posts={posts} />
       </div>
     </div>
   );

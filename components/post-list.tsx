@@ -1,6 +1,7 @@
 import Link from "next/link";
 
 import Post from "../interfaces/post";
+import DateFormatter from "./date-formatter";
 
 interface Props {
   posts: Post[];
@@ -15,7 +16,9 @@ const PostList = ({ posts }: Props): JSX.Element => {
             <Link href={`/posts/${post.slug}`}>{post.title}</Link>
           </h3>
           <div className="mb-4 text-gray-700">{post.excerpt}</div>
-          <div className="mb-4 text-gray-500">{post.date}</div>
+          <div className="mb-4 text-gray-500">
+            <DateFormatter dateString={post.date} />
+          </div>
         </div>
       ))}
     </div>

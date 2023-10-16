@@ -5,8 +5,11 @@ import Container from "../components/container";
 import Home from "../components/home";
 import Layout from "../components/layout";
 import { CMS_NAME } from "../lib/constants";
+import { getAllPosts } from "../lib/api";
 
-export default function Index(): JSX.Element {
+export default async function Index(): Promise<JSX.Element> {
+  const posts = await getAllPosts(["slug", "title", "date", "excerpt"]);
+
   return (
     <>
       <Layout>
@@ -14,7 +17,7 @@ export default function Index(): JSX.Element {
           <title>{`Next.js Blog Example with ${CMS_NAME}`}</title>
         </Head>
         <Container>
-          <Home />
+          <Home posts={posts} />
         </Container>
       </Layout>
     </>
