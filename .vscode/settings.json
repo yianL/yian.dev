@@ -33,5 +33,10 @@
   "cSpell.words": [
     "firestore",
     "tailwindcss"
-  ]
+  ],
+  "[javascript][javascriptreact][typescript][typescriptreact]": {
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": "explicit"
+    }
+  }
 }
