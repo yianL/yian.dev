@@ -25,6 +25,20 @@ export default function RootLayout({
     <html lang="en" className={noto.className}>
       <head>
         <Script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-P9MJR96YXY"
+          strategy="beforeInteractive"
+        />
+        <Script id="ga" strategy="beforeInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-P9MJR96YXY');
+          `}
+        </Script>
+        <Script
           src="https://kit.fontawesome.com/87445c11d6.js"
           strategy="beforeInteractive"
         />
