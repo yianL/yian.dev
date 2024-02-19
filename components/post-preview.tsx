@@ -37,7 +37,7 @@ const PostPreview = ({
         </Link>
       </h3>
       <div className="text-lg mb-4">
-        <DateFormatter dateString={date} />
+        <DateFormatter isoDateString={date} />
       </div>
       <p className="text-lg leading-relaxed mb-4">{excerpt}</p>
       <Avatar name={author.name} picture={author.picture} />

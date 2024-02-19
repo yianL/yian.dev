@@ -1,19 +1,23 @@
 ---
-title: 'Learn How to Pre-render Pages Using Static Generation with Next.js'
-excerpt: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent elementum facilisis leo vel fringilla est ullamcorper eget. At imperdiet dui accumsan sit amet nulla facilities morbi tempus.'
-coverImage: '/assets/blog/hello-world/cover.jpg'
-date: '2020-03-16T05:35:07.322Z'
+title: 'Hello World'
+excerpt: 'Hello, World. Welcome to Pedal Powered Dev, the new homepage/blog where I plan to write about my journey in game dev, cycling, and random things worth documenting in life.'
+coverImage: '/assets/blog/hello-world/helloworld.jpg'
+date: '2024-02-19T01:28:48Z'
 author:
-  name: Yian Lai
+  name: Yian
   picture: '/assets/blog/authors/yian.png'
 ogImage:
-  url: '/assets/blog/hello-world/cover.jpg'
+  url: '/assets/blog/hello-world/helloworld.jpg'
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent elementum facilisis leo vel fringilla est ullamcorper eget. At imperdiet dui accumsan sit amet nulla facilities morbi tempus. Praesent elementum facilisis leo vel fringilla. Congue mauris rhoncus aenean vel. Egestas sed tempus urna et pharetra pharetra massa massa ultricies.
+Hello, World.
 
-Venenatis cras sed felis eget velit. Consectetur libero id faucibus nisl tincidunt. Gravida in fermentum et sollicitudin ac orci phasellus egestas tellus. Volutpat consequat mauris nunc congue nisi vitae. Id aliquet risus feugiat in ante metus dictum at tempor. Sed blandit libero volutpat sed cras. Sed odio morbi quis commodo odio aenean sed adipiscing. Velit euismod in pellentesque massa placerat. Mi bibendum neque egestas congue quisque egestas diam in arcu. Nisi lacus sed viverra tellus in. Nibh cras pulvinar mattis nunc sed. Luctus accumsan tortor posuere ac ut consequat semper viverra. Fringilla ut morbi tincidunt augue interdum velit euismod.
+Welcome to Pedal Powered Dev, the new homepage/blog where I plan to write about my journey in game dev, cycling, and random things worth documenting in life.
 
-## Lorem Ipsum
+Every now and then, I get the itch to revamp my personal site - mostly because tinkering and personalizing stuff is so much fun! It's also a great chance to try out new frameworks and stay up with what's hot in the frontend world. I had lots of fun putting together the previous version of the site @ [v1.yian.dev](https://v1.yian.dev). Cools as it is, with neon lights and an auto-typing terminal effect, it was not the best format to host blog posts and other contents.
 
-Tristique senectus et netus et malesuada fames ac turpis. Ridiculous mus mauris vitae ultricies leo integer malesuada nunc vel. In mollis nunc sed id semper. Egestas tellus rutrum tellus pellentesque. Phasellus vestibulum lorem sed risus ultricies tristique nulla. Quis blandit turpis cursus in hac habitasse platea dictumst quisque. Eros donec ac odio tempor orci dapibus ultrices. Aliquam sem et tortor consequat id porta nibh. Adipiscing elit duis tristique sollicitudin nibh sit amet commodo nulla. Diam vulputate ut pharetra sit amet. Ut tellus elementum sagittis vitae et leo. Arcu non odio euismod lacinia at quis risus sed vulputate.
+With this revision, I decided to go with a monotonic color palette and minimalist design, inspired by the art styles in the game Firewatch (cover image above). Tools like [UI Colors](https://uicolors.app/create) made it super easy to generate a set a coherent and beautiful colors to use from any base color you choose. Going with tailwind CSS is also another major departure from how I was used to styling with CSS and a breath of fresh air. Not having to jump between CSS files and your react components is a bliss so far. The mobile-first approach definitely took me some time to get used to and introduced headaches at first, but it really helped me make this site responsive from day 0 rather than building in responsiveness as an after thought.
+
+This marks the v2.0 debut of yian.dev, and I'm super excited about the journey ahead. Pedal on. (Curtesy of [Google Gemini](https://gemini.google.com))
+
+![Hello World](/assets/blog/hello-world/gemini.jpg)

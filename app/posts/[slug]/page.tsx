@@ -1,3 +1,5 @@
+import { Metadata, ResolvingMetadata } from "next";
+
 import Container from "../../../components/container";
 import Header from "../../../components/header";
 import Layout from "../../../components/layout";
@@ -5,12 +7,35 @@ import PostBody from "../../../components/post-body";
 import PostHeader from "../../../components/post-header";
 import PostType from "../../../interfaces/post";
 import { getAllPosts, getPostBySlug } from "../../../lib/api";
+import { Suffix } from "../../../lib/constants";
 import markdownToHtml from "../../../lib/markdownToHtml";
 
 export const dynamicParams = false;
 
 interface Params {
   slug: string;
+}
+
+type Props = {
+  params: { slug: string };
+};
+
+export async function generateMetadata(
+  { params }: Props,
+  _: ResolvingMetadata
+): Promise<Metadata> {
+  const { slug } = params;
+
+  // fetch data
+  const post = getPostBySlug(slug, ["title", "excerpt", "ogImage"]);
+
+  return {
+    title: `${post.title}${Suffix}`,
+    description: post.excerpt,
+    openGraph: {
+      images: [post.ogImage],
+    },
+  };
 }
 
 export default async function Page({

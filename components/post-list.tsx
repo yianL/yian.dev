@@ -17,7 +17,7 @@ const PostList = ({ posts }: Props): JSX.Element => {
           </h3>
           <div className="mb-4 text-gray-700">{post.excerpt}</div>
           <div className="mb-4 text-gray-500">
-            <DateFormatter dateString={post.date} />
+            <DateFormatter isoDateString={post.date} />
           </div>
         </div>
       ))}

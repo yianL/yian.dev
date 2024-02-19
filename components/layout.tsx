@@ -7,7 +7,7 @@ interface Props {
 
 const Layout = ({ preview, children }: Props): JSX.Element => {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen mx-8">
       <Alert preview={preview} />
       <main>{children}</main>
     </div>

@@ -1,5 +1,6 @@
-export const EXAMPLE_PATH = "blog-starter";
-export const CMS_NAME = "Markdown";
+export const Suffix = " | Pedal Powered Dev";
+export const SiteTitle = `Yi-An Lai${Suffix}`;
+export const SiteDescription = "Cycle, caffeinate, code, repeat.";
 
 export const Signature = `%c
 __   ___         _            _          _
