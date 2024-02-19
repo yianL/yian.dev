@@ -1,7 +1,7 @@
 import Link from "next/link";
 
-import Post from "../interfaces/post";
 import DateFormatter from "./date-formatter";
+import Post from "../interfaces/post";
 
 interface Props {
   posts: Post[];
