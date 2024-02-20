@@ -1,8 +1,9 @@
 import { Metadata, ResolvingMetadata } from "next";
 
 import Container from "../../../components/container";
-import Header from "../../../components/header";
 import Layout from "../../../components/layout";
+import PageFooter from "../../../components/page-footer";
+import PageHeader from "../../../components/page-header";
 import PostBody from "../../../components/post-body";
 import PostHeader from "../../../components/post-header";
 import PostType from "../../../interfaces/post";
@@ -47,7 +48,7 @@ export default async function Page({
   return (
     <Layout>
       <Container>
-        <Header />
+        <PageHeader />
         <article className="mb-32">
           <PostHeader
             title={post.title}
@@ -57,6 +58,7 @@ export default async function Page({
           />
           <PostBody content={post.content} />
         </article>
+        <PageFooter />
       </Container>
     </Layout>
   );

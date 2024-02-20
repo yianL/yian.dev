@@ -6,7 +6,11 @@
 .markdown ul,
 .markdown ol,
 .markdown blockquote {
-  @apply my-6;
+  @apply my-8;
+}
+
+.markdown a {
+  @apply text-brand-600 underline;
 }
 
 .markdown h2 {
@@ -15,4 +19,8 @@
 
 .markdown h3 {
   @apply text-2xl mt-8 mb-4 leading-snug;
+}
+
+.markdown img {
+  @apply shadow-md;
 }

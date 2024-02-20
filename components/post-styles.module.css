@@ -1,0 +1,4 @@
+.footer li:not(:last-child)::after {
+  content: "|";
+  @apply mx-4;
+}

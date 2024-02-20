@@ -13,4 +13,8 @@
   h2 {
     @apply text-2xl;
   }
+
+  a {
+    @apply hover:underline;
+  }
 }

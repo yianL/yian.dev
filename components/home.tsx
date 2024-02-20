@@ -13,7 +13,7 @@ const Home = ({ posts }: Props): JSX.Element => {
         <Logo />
         <h1>Yi-An Lai</h1>
         <h2>Fullstack | Roadie</h2>
-        <div className="flex flex-row items-center justify-center gap-2 text-4xl min-h-[40px]">
+        <div className="flex flex-row items-center justify-center gap-2 text-2xl min-h-[40px]">
           <a
             href="https://www.linkedin.com/in/yi-an-lai-andrew/"
             target="_blank"
