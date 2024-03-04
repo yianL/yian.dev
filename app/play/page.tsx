@@ -1,8 +1,8 @@
+import { Metadata } from "next/types";
 import React from "react";
 
 import Container from "../../components/container";
 import Layout from "../../components/layout";
-import { Metadata } from "next/types";
 import { Suffix } from "../../lib/constants";
 
 export const metadata: Metadata = {
