@@ -1,4 +1,4 @@
-import { Metadata } from "next/types";
+import { Metadata, Viewport } from "next/types";
 import React from "react";
 
 import Container from "../../components/container";
@@ -7,6 +7,14 @@ import { Suffix } from "../../lib/constants";
 
 export const metadata: Metadata = {
   title: `Playground${Suffix}`,
+};
+
+export const viewport: Viewport = {
+  width: "device-width",
+  height: "device-height",
+  initialScale: 1,
+  maximumScale: 1,
+  userScalable: false,
 };
 
 export default async function Index(): Promise<JSX.Element> {
