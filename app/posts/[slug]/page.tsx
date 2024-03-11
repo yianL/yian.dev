@@ -18,7 +18,7 @@ interface Params {
 }
 
 type Props = {
-  params: { slug: string };
+  params: Params;
 };
 
 export async function generateMetadata(
